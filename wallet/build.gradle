@@ -24,7 +24,8 @@ dependencies {
     implementation 'androidx.sqlite:sqlite:2.1.0'
     implementation "androidx.room:room-runtime:2.2.5"
     annotationProcessor "androidx.room:room-compiler:2.2.5"
-    api 'com.dogecoin:libdohj-core:0.15-SNAPSHOT'
+    implementation 'org.bitcoinj:bitcoinj-core:0.15.9'
+    api 'com.github.dogecoin:libdohj:0.15'
     implementation 'com.lambdaworks:scrypt:1.4.0'
     implementation 'com.google.protobuf:protobuf-java:3.7.1'
     implementation 'com.google.guava:guava:29.0-android'
@@ -44,7 +45,7 @@ ext {
 }
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 31
 
     defaultConfig {
         applicationId 'de.langerhans'
@@ -52,7 +53,7 @@ android {
             preDexLibraries false
         }
         minSdkVersion 23
-        targetSdkVersion 29
+        targetSdkVersion 31
         versionCode 400
         versionName '4.0.0'
         vectorDrawables.useSupportLibrary = true
